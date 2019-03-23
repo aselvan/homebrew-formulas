@@ -39,6 +39,7 @@ class Curl < Formula
     ]
 
     args << "--with-libssh2"
+    args << "--with-openssl"
 
     system "./configure", *args
     system "make", "install"
