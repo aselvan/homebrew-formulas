@@ -1,6 +1,7 @@
-# Install curl on Mac OS with openssl and libssh2 (sftp) support
+## My Homebrew Formulas
+### curl - install curl on MacOS with openssl and libssh2 (sftp) support
 
 ```
-brew install aselvan/homebrew-custom/curl
+brew install aselvan/homebrew/curl
 ```
 
