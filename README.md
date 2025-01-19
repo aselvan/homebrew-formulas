@@ -1,7 +1,7 @@
 ## My Homebrew Formulas
-Formulas for home brew. To install anything of the formulas below you have to
+Formulas for home brew. To install any of the formulas below you have to
 first tap this repo first as shown below. After that, you can install with 
-brew install <name> ... 
+```brew install <formula_name>``` 
 
 ```brew tap aselvan/homebrew```
 
