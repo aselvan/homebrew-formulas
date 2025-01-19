@@ -7,26 +7,40 @@ class AselvanScripts < Formula
   license "MIT"
 
   def install
-    # Install everything to the Cellar (handled automatically)
+    # Install everything directly to the prefix (Cellar directory)
+    prefix.install Dir["*"]
 
-    # Create the single symlink in /usr/local/bin pointing to the installation directory
-    bin.install_symlink prefix => name
+    # Make scripts executable (within the prefix) --- NOT needed when files are already set to be +x in source location
+    #Dir[prefix/"*.sh"].each { |f| chmod "+x", f } # or Dir[prefix/"scripts/*.sh"] if they are in a scripts/ folder    
   end
 
-  caveats do
+  def caveats
     <<~EOS
-      To add #{name} to your PATH, add the following line to your ~/.bashrc:
-        export GITHUB_SCRIPTS_HOME="#{opt_bin}"
-        export PATH="$PATH:#{opt_bin}/utils:#{opt_bin}/security:#{opt_bin}/tools:#{opt_bin}/macos:#{opt_bin}/firewall"
+    ============================================================================
+    #{name}:
 
-      Or, if you prefer, you can use the following command:
-        echo 'export GITHUB_SCRIPTS_HOME="#{opt_bin}"' >> ~/.bashrc
-        echo 'export PATH="$PATH:#{opt_bin}/utils:#{opt_bin}/security:#{opt_bin}/tools:#{opt_bin}/macos:#{opt_bin}/firewall"' >> ~/.bashrc
+    While this scripts content is installed, it requires the following environment
+    variables GITHUB_SCRIPTS_HOME and PATH set in ~/.bashrc to function. You *must* 
+    add the following to your ~/.bashrc variable for these scripts to work. Execute 
+    both commands in the order listed below on the terminal to insert it at the end 
+    of your ~/.bashrc. i.e. just copy/paste each line and press enter.
+
+    echo 'export GITHUB_SCRIPTS_HOME="#{opt_prefix}"' >> ~/.bashrc
+    echo 'export PATH="$PATH:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall"' >> ~/.bashrc
+
+    ============================================================================
     EOS
   end
 
   test do
-    assert_predicate bin/name, :exist?
+    if File.exist?(opt_prefix)
+      puts "#{name} is installed."
+      puts "Location: #{opt_prefix}"
+      puts "Version:  #{version}"
+    else
+      puts "#{name}: is not installed" 
+    end
+    assert_predicate opt_prefix, :exist?
     #assert_match "expected output", shell_output("#{bin}/#{name}/some_script.sh --version")
   end
 end
