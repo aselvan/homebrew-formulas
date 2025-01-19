@@ -1,5 +1,8 @@
 ## My Homebrew Formulas
-Formulas for home brew. To use install tap as shown below first
+Formulas for home brew. To install anything of the formulas below you have to
+first tap this repo first as shown below. After that, you can install with 
+brew install <name> ... 
+
 ```brew tap aselvan/homebrew```
 
 ### curl - curl on MacOS with openssl and libssh2 (sftp) support
