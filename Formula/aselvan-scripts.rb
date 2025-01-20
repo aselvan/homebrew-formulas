@@ -1,8 +1,8 @@
 class AselvanScripts < Formula
   desc "aselvan-scripts --- a collection of handy utility scripts for macOS & Linux"
   homepage "https://github.com/aselvan/scripts"
-  version "v25.01.18"
-  url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.18.tar.gz"
+  version "v25.01.120"
+  url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.20.tar.gz"
   sha256 "e10f4c0fc40a6c33bbf3af5f60b5033d1681fbab84be39a26dfa1a2005a35348"
   license "MIT"
 
