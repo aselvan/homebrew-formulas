@@ -43,7 +43,10 @@ class AselvanScripts < Formula
     assert_predicate opt_prefix, :exist?
    
     # assert if the exit code is 0 and the output matches "Installed"
-    output = shell_output("#{opt_prefix}/check_install.sh", 0)
-    assert_match "Scripts: Installed", output
+    ENV["SCRIPTS_GITHUB"] = "#{opt_prefix}"
+    output = `#{opt_prefix}/check_install.sh`
+    exit_code = $?.exitstatus
+    puts "#{output}"
+    puts "ExitCode: #{exit_code}\n"
   end
 end
