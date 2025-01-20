@@ -41,6 +41,9 @@ class AselvanScripts < Formula
       puts "#{name}: is not installed" 
     end
     assert_predicate opt_prefix, :exist?
-    #assert_match "expected output", shell_output("#{bin}/#{name}/some_script.sh --version")
+   
+    # assert if the exit code is 0 and the output matches "Installed"
+    output = shell_output("#{opt_prefix}/check_install.sh", 0)
+    assert_match "Scripts: Installed", output
   end
 end
