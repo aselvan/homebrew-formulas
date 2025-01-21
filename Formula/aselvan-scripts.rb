@@ -16,19 +16,19 @@ class AselvanScripts < Formula
 
   def caveats
     <<~EOS
-    ============================================================================
+    =================================================================================
     #{name}:
 
     While this scripts content is installed, it requires the following environment
-    variables GITHUB_SCRIPTS_HOME and PATH set in ~/.bashrc to function. You *must* 
-    add the following to your ~/.bashrc variable for these scripts to work. Execute 
-    both commands in the order listed below on the terminal to insert it at the end 
-    of your ~/.bashrc. i.e. just copy/paste each line and press enter.
+    variables SCRIPTS_GITHUB and PATH set in ~/.bashrc to function. You *must* add 
+    the following to your ~/.bashrc variable for these scripts to work. Execute both 
+    commands in the order listed below on the terminal to insert it at the end of 
+    your ~/.bashrc. i.e. just copy/paste each line and press enter.
 
-    echo 'export GITHUB_SCRIPTS_HOME="#{opt_prefix}"' >> ~/.bashrc
+    echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/.bashrc
     echo 'export PATH="$PATH:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall"' >> ~/.bashrc
 
-    ============================================================================
+    =================================================================================
     EOS
   end
 
