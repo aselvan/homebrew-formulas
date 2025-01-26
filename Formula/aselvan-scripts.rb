@@ -3,7 +3,7 @@ class AselvanScripts < Formula
   homepage "https://github.com/aselvan/scripts"
   version "v25.01.20"
   url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.20.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "7f315980d73713bc15a6dae9a59a8f095fb141bcacebf6dedfa539cffacdd29a"
   license "MIT"
 
   def install
