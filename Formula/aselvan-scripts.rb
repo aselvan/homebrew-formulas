@@ -1,9 +1,9 @@
 class AselvanScripts < Formula
   desc "aselvan-scripts --- a collection of handy utility scripts for macOS & Linux"
   homepage "https://github.com/aselvan/scripts"
-  version "v25.01.120"
+  version "v25.01.20"
   url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.20.tar.gz"
-  sha256 "f56a1559700cd4f1e0bfc4b01af45e3650944b2f91477f079f9d9cfba462aeda"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   license "MIT"
 
   def install
@@ -17,7 +17,7 @@ class AselvanScripts < Formula
   def caveats
     <<~EOS
     =================================================================================
-    #{name}:
+    #{name} #{version}
 
     While this scripts content is installed, it requires the following environment
     variables SCRIPTS_GITHUB and PATH set in ~/.bashrc to function. You *must* add 
