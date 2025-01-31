@@ -35,6 +35,7 @@ class AselvanScripts < Formula
     echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/.bashrc
     echo 'export PATH="#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/.bashrc
 
+    NOTE: You only need to do this once at the very first install. Skip for updates.
     =================================================================================
     EOS
   end
