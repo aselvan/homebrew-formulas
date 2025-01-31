@@ -2,8 +2,8 @@ class AselvanScripts < Formula
   desc "aselvan-scripts --- a collection of handy utility scripts for macOS & Linux"
   homepage "https://github.com/aselvan/scripts"
   version "v25.01.20"
-  url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.20.tar.gz"
-  sha256 "1a80d50ce64c1db11abf575a1f751eb4f4ee8e728e99adccb23bf7d4ba252f72"
+  url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.31.tar.gz"
+  sha256 "f21d48244fed08a9c3f8e2a32cf50a41927cb3afc535e1f51865b6773308dfc0"
   license "MIT"
 
   # dependency 
