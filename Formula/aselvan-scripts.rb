@@ -6,6 +6,9 @@ class AselvanScripts < Formula
   sha256 "1a80d50ce64c1db11abf575a1f751eb4f4ee8e728e99adccb23bf7d4ba252f72"
   license "MIT"
 
+  # dependency 
+  depends_on "bash"
+
   def install
     # Install everything directly to the prefix (Cellar directory)
     prefix.install Dir["*"]
@@ -26,7 +29,7 @@ class AselvanScripts < Formula
     your ~/.bashrc. i.e. just copy/paste each line and press enter.
 
     echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/.bashrc
-    echo 'export PATH="$PATH:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall"' >> ~/.bashrc
+    echo 'export PATH="$#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/.bashrc
 
     =================================================================================
     EOS
