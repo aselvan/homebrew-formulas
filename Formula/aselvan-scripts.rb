@@ -29,7 +29,7 @@ class AselvanScripts < Formula
     your ~/.bashrc. i.e. just copy/paste each line and press enter.
 
     echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/.bashrc
-    echo 'export PATH="$#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/.bashrc
+    echo 'export PATH="#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/.bashrc
 
     =================================================================================
     EOS
