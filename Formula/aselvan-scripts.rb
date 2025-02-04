@@ -5,13 +5,21 @@ class AselvanScripts < Formula
   ### all 3 of these varibables below should be updated on new release
   version "v25.01.31"
   url "https://github.com/aselvan/scripts/archive/refs/tags/v25.01.31.tar.gz"
-  sha256 "f21d48244fed08a9c3f8e2a32cf50a41927cb3afc535e1f51865b6773308dfc0"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   
   # licence release
   license "MIT"
 
-  # dependency (we need latest bash on macOS)
+  # dependency
+  #   We need latest bash on macOS and few basic things. I am not including every pakage
+  #   scripts in this repo depends on, but user can install as needed.
   depends_on "bash"
+  depends_on "curl"
+  depends_on "wget"
+  depends_on "zbar"
+  depends_on "exiftool"
+  depends_on "oath-toolkit"
+  depends_on "imagemagick"
 
   def install
     # Install everything directly to the prefix (Cellar directory)
