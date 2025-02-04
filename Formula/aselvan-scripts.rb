@@ -30,6 +30,13 @@ class AselvanScripts < Formula
   end
 
   def caveats
+    # check for shell and change the rc file accordingly
+    resfile = ".zshrc"
+    shell = ENV['SHELL']
+    if shell.include?("bash")
+      resfile = ".bashrc"
+    end
+    
     <<~EOS
     =================================================================================
     #{name} #{version}
@@ -40,8 +47,8 @@ class AselvanScripts < Formula
     commands in the order listed below on the terminal to insert it at the end of 
     your ~/.bashrc. i.e. just copy/paste each line and press enter.
 
-    echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/.bashrc
-    echo 'export PATH="#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/.bashrc
+    echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/#{resfile}
+    echo 'export PATH="#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/#{resfile}
 
     NOTE: You only need to do this once at the very first install. Skip for updates.
     =================================================================================
