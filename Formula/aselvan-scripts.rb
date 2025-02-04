@@ -42,10 +42,10 @@ class AselvanScripts < Formula
     #{name} #{version}
 
     While this scripts content is installed, it requires the following environment
-    variables SCRIPTS_GITHUB and PATH set in ~/.bashrc to function. You *must* add 
-    the following to your ~/.bashrc variable for these scripts to work. Execute both 
-    commands in the order listed below on the terminal to insert it at the end of 
-    your ~/#{resfile}. i.e. just copy/paste each line and press enter
+    variables SCRIPTS_GITHUB and PATH set in ~/#{resfile} to function. You *must* 
+    add the following to your ~/#{resfile} for the scripts to work. Execute both 
+    commands in the order listed below on the terminal to insert it at the end 
+    of your ~/#{resfile}. i.e. just copy/paste each line and press enter.
 
     echo 'export SCRIPTS_GITHUB="#{opt_prefix}"' >> ~/#{resfile}
     echo 'export PATH="#{HOMEBREW_PREFIX}/bin:#{opt_prefix}/utils:#{opt_prefix}/security:#{opt_prefix}/tools:#{opt_prefix}/macos:#{opt_prefix}/firewall:$PATH"' >> ~/#{resfile}
