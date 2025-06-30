@@ -5,7 +5,7 @@ class AselvanScripts < Formula
   ### all 3 of these varibables below should be updated on new release
   version "v25.06.12"
   url "https://github.com/aselvan/scripts/archive/refs/tags/v25.06.12.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "cfb0a9f2ea673c0a770896c24276b91c58f8686a8744f1a67fb271c3e07a8379"
   
   # licence release
   license "MIT"
