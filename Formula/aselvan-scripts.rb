@@ -40,9 +40,9 @@ class AselvanScripts < Formula
     <<~EOS
     =================================================================================
     #{desc}
-    #{homepage}
-    #{name} #{version}
-
+      GitHub:  #{homepage}
+      Version: #{name} #{version}
+      License: #{license}
 
     While this scripts content is installed, it requires the following environment
     variables SCRIPTS_GITHUB and PATH set in ~/#{resfile} to function. You *must* 
