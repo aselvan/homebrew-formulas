@@ -3,9 +3,9 @@ class AselvanScripts < Formula
   homepage "https://github.com/aselvan/scripts"
 
   ### all 3 of these varibables below should be updated on new release
-  version "v26.03.03"
-  url "https://github.com/aselvan/scripts/archive/refs/tags/v26.03.03.tar.gz"
-  sha256 "2d8cef8b8c59f80f217d2662d2df0c46fd902c7b7f6b102eb84d41ba999ba5a9"
+  version "v26.03.10"
+  url "https://github.com/aselvan/scripts/archive/refs/tags/v26.03.10.tar.gz"
+  sha256 "b0b44bf4a844f2d09b96c36bfad9c13095dcfd7d312009dcb68a195ebe92d10d"
   
   # licence release
   license "MIT"
@@ -39,7 +39,10 @@ class AselvanScripts < Formula
     
     <<~EOS
     =================================================================================
+    #{desc}
+    #{homepage}
     #{name} #{version}
+
 
     While this scripts content is installed, it requires the following environment
     variables SCRIPTS_GITHUB and PATH set in ~/#{resfile} to function. You *must* 
