@@ -3,9 +3,9 @@ class AselvanScripts < Formula
   homepage "https://github.com/aselvan/scripts"
 
   ### all 3 of these varibables below should be updated on new release
-  version "v26.05.01"
-  url "https://github.com/aselvan/scripts/archive/refs/tags/v26.05.01.tar.gz"
-  sha256 "7b75e7c3f2e8f781418bee12c8e6ca587b2eb115f83ab3c6f9fb38dc8195006a"
+  version "v26.11.05"
+  url "https://github.com/aselvan/scripts/archive/refs/tags/v26.11.05.tar.gz"
+  sha256 "7b7942cd8a30561653149df281094037e91aec54e0e2db2d8d5217c4aeeb0ac3"
   
   # licence release
   license "MIT"
